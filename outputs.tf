@@ -170,3 +170,8 @@ output "security_group_rule_cluster_https_worker_ingress" {
   description = "Security group rule responsible for allowing pods to communicate with the EKS cluster API."
   value       = aws_security_group_rule.cluster_https_worker_ingress
 }
+
+output "eks_oidc_root_ca_thumbprint" {
+  description = "Thumbprint of Root CA for EKS OIDC, Valid until 2037"
+  value       = var.eks_oidc_root_ca_thumbprint
+}
